@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"ID와 PW를 입력하세요.",Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this,id+"님 안녕하세요.",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, MainReportActivity.class);
+                    startActivity(intent);
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("login", MainActivity.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("userId",id);
+                    finish();
                 }
             }
         });
