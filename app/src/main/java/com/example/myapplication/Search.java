@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.QuickContactBadge;
 
@@ -40,5 +42,22 @@ public class Search extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+editText.setOnKeyListener(new View.OnKeyListener() {
+    @Override
+    public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+        if ((event.getAction() == KeyEvent.ACTION_DOWN) &&(keyCode == KeyEvent.KEYCODE_ENTER)) {
+            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(editText.getWindowToken(),0);
+
+            if (editText.getText().toString().equals("포도"));
+            Intent intent = new Intent(Search.this,SearchDetail.class);
+            startActivity(intent);
+        }
+
+        return false;
+    }
+});
     }
 }

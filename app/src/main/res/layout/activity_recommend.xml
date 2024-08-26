@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="350dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/recommend"
-        android:layout_marginTop="-10dp"
+        android:src="@drawable/recommend_img"
+        android:layout_marginTop="-50dp"
         android:id="@+id/recommend_img"
         />
 

@@ -24,7 +24,9 @@
         android:drawableLeft="@drawable/search_icon_custom"
         android:drawablePadding="10dp"
         android:drawableTint="#BFBFC0"
-        android:id="@+id/search_bar"/>
+        android:id="@+id/search_bar"
+        android:singleLine="true"
+        android:maxLines="1"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,30 +51,31 @@
         app:layout_constraintTop_toBottomOf="@id/search_bar"
         app:layout_constraintStart_toStartOf="@id/search_bar"
         android:text="인기 농작물"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/gmarketsans"
+        android:layout_marginStart="20dp"
         android:textSize="18dp"/>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="330dp"
         android:src="@drawable/search_img"
         app:layout_constraintTop_toBottomOf="@id/search_bar"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="100dp"/>
 
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toTopOf="@id/search_nav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/custom_button"
         android:text="AI로 농작물 추천받기"
         android:fontFamily="@font/gmarketsans"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:textColor="#FFFFFF"
         android:id="@+id/search_button"/>
 

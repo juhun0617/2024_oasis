@@ -41,25 +41,18 @@ public class Recommend extends AppCompatActivity {
         set2.setTarget(recommend2);
         set3.setTarget(recommend3);
 
-        recommend2.setVisibility(View.INVISIBLE);
-        recommend3.setVisibility(View.INVISIBLE);
+        //recommend2.setVisibility(View.INVISIBLE);
+        //recommend3.setVisibility(View.INVISIBLE);
 
-        set1.start();
 
-        set1.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation){
-                recommend2.setVisibility(View.VISIBLE);
-                set2.start();
-                set2.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        recommend3.setVisibility(View.VISIBLE);
-                        set3.start();
-                    }
-                });
-            }
-        });
+        recommend1.setAlpha(0);
+        recommend2.setAlpha(0);
+        recommend3.setAlpha(0);
+
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playSequentially(set1, set2, set3);  // 순서대로 실행
+        animatorSet.start();
+
 
     }
 }

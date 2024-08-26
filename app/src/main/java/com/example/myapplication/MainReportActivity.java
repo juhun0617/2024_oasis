@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainReportActivity extends AppCompatActivity {
     TextView temp;
-    ConstraintLayout searchButton,weatherButton;
+    ConstraintLayout searchButton,weatherButton,announceButton;
     ImageView nav_community;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,8 @@ public class MainReportActivity extends AppCompatActivity {
         nav_community = findViewById(R.id.nav_cumu);
         searchButton = findViewById(R.id.search_button);
         weatherButton = findViewById(R.id.weather_button);
+        announceButton = findViewById(R.id.announcement_button);
+
 
         nav_community.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +58,14 @@ public class MainReportActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent urlintent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.weather.go.kr/w/index.do"));
                 startActivity(urlintent);
+            }
+        });
+
+        announceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainReportActivity.this,Announcement.class);
+                startActivity(intent);
             }
         });
 

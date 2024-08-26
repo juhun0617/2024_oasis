@@ -13,6 +13,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Announce2"
+            android:exported="false" />
+        <activity
+            android:name=".Announce1"
+            android:exported="false" />
+        <activity
+            android:name=".Announcement"
+            android:exported="false" />
+        <activity
+            android:name=".SearchDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
             android:name=".Recommend"
             android:exported="false" />
         <activity

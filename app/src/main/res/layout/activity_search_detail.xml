@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchDetail">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/search_detail_img"
+        android:layout_marginTop="-10dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/rounded_top_white"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="포도"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/search_detail_title"
+            />
+        <View
+            android:layout_width="340dp"
+            android:layout_height="0.5dp"
+            android:background="@color/black"
+            android:layout_marginTop="65dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="수확 시기 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="90dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_1"
+            app:layout_constraintStart_toEndOf="@id/search_detail_1"
+            android:text="8월 말~10월 말"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_detail_1"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="소모기간 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_2"
+            app:layout_constraintStart_toEndOf="@id/search_detail_2"
+            android:text="120일"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_detail_2"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="제철 시기 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_3"
+            app:layout_constraintStart_toEndOf="@id/search_detail_3"
+            android:text="8월 ~ 9월"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_detail_3"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="재배지 추천 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_4"
+            app:layout_constraintStart_toEndOf="@id/search_detail_4"
+            android:text="물빠짐이 좋은곳"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_detail_4"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="주요 품종 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_5"
+            app:layout_constraintStart_toEndOf="@id/search_detail_5"
+            android:text="거봉, 샤인머스켓"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_detail_5"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="경제성 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_6"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_6"
+            app:layout_constraintStart_toEndOf="@id/search_detail_6"
+            android:text="초기 투자 비용 높은편"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_detail_6"
+            app:layout_constraintStart_toStartOf="@id/search_detail_title"
+            android:text="주요 병해 : "
+            android:fontFamily="@font/gmarketsans"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/search_detail_7"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/search_detail_7"
+            app:layout_constraintStart_toEndOf="@id/search_detail_7"
+            android:text="노균병, 세눈무늬병\n흰가루병"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="20dp"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/custom_search_detail_button"
+            android:text="내 작물에 추가하기"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="15dp"
+            android:textColor="@color/white"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+
+        android:id="@+id/search_nav">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#4C4C4C"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gray_home_corrected"
+            android:id="@+id/nav_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/nav_home_title"
+            app:layout_constraintEnd_toStartOf="@id/nav_chat"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="홈"
+            android:id="@+id/nav_home_title"
+            app:layout_constraintTop_toBottomOf="@id/nav_home"
+            app:layout_constraintStart_toStartOf="@id/nav_home"
+            app:layout_constraintEnd_toEndOf="@id/nav_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="12dp"/>
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gray_chat"
+            android:id="@+id/nav_chat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nav_home"
+            app:layout_constraintBottom_toTopOf="@id/nav_chat_title"
+            app:layout_constraintEnd_toStartOf="@id/nav_cumu"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅"
+            android:id="@+id/nav_chat_title"
+            app:layout_constraintTop_toBottomOf="@id/nav_chat"
+            app:layout_constraintStart_toStartOf="@id/nav_chat"
+            app:layout_constraintEnd_toEndOf="@id/nav_chat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="12dp"/>
+
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gray_teamwork"
+            android:id="@+id/nav_cumu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nav_chat"
+            app:layout_constraintBottom_toTopOf="@id/nav_cumu_title"
+            app:layout_constraintEnd_toStartOf="@id/nav_menu"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커뮤니티"
+            android:id="@+id/nav_cumu_title"
+            app:layout_constraintTop_toBottomOf="@id/nav_cumu"
+            app:layout_constraintStart_toStartOf="@id/nav_cumu"
+            app:layout_constraintEnd_toEndOf="@id/nav_cumu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="12dp"/>
+
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gray_burger_bar"
+            android:id="@+id/nav_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nav_cumu"
+            app:layout_constraintBottom_toTopOf="@id/nav_menu_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="메뉴"
+            android:id="@+id/nav_menu_title"
+            app:layout_constraintTop_toBottomOf="@id/nav_menu"
+            app:layout_constraintStart_toStartOf="@id/nav_menu"
+            app:layout_constraintEnd_toEndOf="@id/nav_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/gmarketsans"
+            android:textSize="12dp"/>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
