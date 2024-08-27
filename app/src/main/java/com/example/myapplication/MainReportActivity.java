@@ -18,8 +18,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainReportActivity extends AppCompatActivity {
     TextView temp;
-    ConstraintLayout searchButton,weatherButton,announceButton;
-    ImageView nav_community;
+    ConstraintLayout searchButton,weatherButton,announceButton,myPageButton;
+    ImageView nav_community,nav_chat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +35,21 @@ public class MainReportActivity extends AppCompatActivity {
         searchButton = findViewById(R.id.search_button);
         weatherButton = findViewById(R.id.weather_button);
         announceButton = findViewById(R.id.announcement_button);
-
+        myPageButton = findViewById(R.id.mycrop_button);
+        nav_chat = findViewById(R.id.nav_chat);
 
         nav_community.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainReportActivity.this, Community.class);
+                startActivity(intent);
+            }
+        });
+
+        nav_chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainReportActivity.this,Chat.class);
                 startActivity(intent);
             }
         });
@@ -65,6 +74,14 @@ public class MainReportActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainReportActivity.this,Announcement.class);
+                startActivity(intent);
+            }
+        });
+
+        myPageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainReportActivity.this,Mypage_main.class);
                 startActivity(intent);
             }
         });

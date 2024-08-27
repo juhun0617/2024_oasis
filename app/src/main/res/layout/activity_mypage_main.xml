@@ -5,25 +5,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chat"
-    android:background="#FAFAFA">
-
+    tools:context=".Mypage_main"
+    android:background="@color/white">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="650dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/chat_img"
+        android:src="@drawable/mypage_0"
+        android:layout_marginTop="-10dp"
         />
 
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/chat_juhun"
+        android:layout_height="120dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="88dp"
-        />
+        android:layout_marginTop="235dp"
+        android:id="@+id/mypage_1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="370dp"
+        android:id="@+id/mypage_2"/>
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -131,8 +139,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
